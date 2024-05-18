@@ -1,0 +1,11 @@
+<header>
+	<a href="{% url 'app:home' %}">Home</a>
+	{% if not request.user.is_authenticated %}
+	<a href="{% url 'app:user_sign_up' %}">SignUp</a>
+	<a href="{% url 'app:user_sign_in' %}">SignIn</a>
+	{% else %}
+	<a href="{% url 'app:user_page' request.user.username %}">Me</a>
+	<a href="{% url 'app:user_sign_out' %}">SignOut</a>
+	{% endif %}
+</header>
+<br>

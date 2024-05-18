@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ user.username }} {% endblock %}
+
+{% block content %}
+
+<div class="center">
+	<h1>{{ user.username }}</h1>
+	<hr>
+	<h2>{{ user.email }}</h2>
+	{% if request.user == user %}
+	<hr>
+	<a href="{% url 'app:user_update' user.username %}" class="btn btn-info w-50">Update Info</a>
+	<br><br>
+	<a href="{% url 'app:user_delete' user.username %}" class="btn btn-danger w-50">Delete Account</a>
+	{% endif %}
+</div>
+
+{% endblock %}

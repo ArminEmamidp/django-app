@@ -1,0 +1,35 @@
+header {
+	padding: 1%;
+	background-color: darkblue;
+}
+header a {
+	margin-right: 2%;
+	font-size: 1.5rem;
+	transition: 0.2s;
+	color: yellow;
+}
+header a:hover {
+	text-decoration: none;
+	color: #D7E137;
+}
+
+#message {
+	width: 95%;
+	margin-left: 2%;
+	text-align: center;
+	font-size: 1.3rem;
+}
+
+.content {
+	width: 80%;
+	margin-left: 10%;
+	padding: 2%;
+	border: 1px solid black;
+	border-radius: 5px;
+	color: white;
+	background-color: darkblue;
+}
+
+.center {
+	text-align: center;
+}
